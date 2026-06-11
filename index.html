@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Calm — Breathing &amp; Meditation</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>Calm</h1>
+      <nav class="tabs">
+        <button class="tab-btn active" data-tab="breathe">Breathe</button>
+        <button class="tab-btn" data-tab="meditate">Meditate</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Breathing Section -->
+      <section id="breathe" class="tab-panel active">
+        <div class="pattern-select">
+          <label for="pattern">Pattern</label>
+          <select id="pattern">
+            <option value="box">Box Breathing (4-4-4-4)</option>
+            <option value="478">4-7-8 Relaxing Breath</option>
+            <option value="calm">Calm Breath (4-2-6)</option>
+            <option value="deep">Deep Breath (5-0-5)</option>
+          </select>
+        </div>
+
+        <div class="breathing-stage">
+          <div class="circle" id="circle">
+            <span class="circle-text" id="circleText">Press Start</span>
+          </div>
+        </div>
+
+        <div class="breath-info">
+          <span id="cycleCount">Cycles: 0</span>
+        </div>
+
+        <div class="controls">
+          <button id="startBreathBtn" class="primary-btn">Start</button>
+          <button id="stopBreathBtn" class="secondary-btn" disabled>Stop</button>
+        </div>
+      </section>
+
+      <!-- Meditation Section -->
+      <section id="meditate" class="tab-panel">
+        <div class="timer-display">
+          <span id="timeDisplay">05:00</span>
+        </div>
+
+        <div class="duration-select">
+          <label for="duration">Duration</label>
+          <select id="duration">
+            <option value="60">1 minute</option>
+            <option value="180">3 minutes</option>
+            <option value="300" selected>5 minutes</option>
+            <option value="600">10 minutes</option>
+            <option value="900">15 minutes</option>
+            <option value="1200">20 minutes</option>
+          </select>
+        </div>
+
+        <div class="sound-select">
+          <label for="ambient">Ambient sound</label>
+          <select id="ambient">
+            <option value="none">None</option>
+            <option value="rain">Rain</option>
+            <option value="ocean">Ocean Waves</option>
+            <option value="white">White Noise</option>
+          </select>
+        </div>
+
+        <div class="meditation-stage">
+          <div class="meditation-circle" id="meditationCircle"></div>
+        </div>
+
+        <div class="controls">
+          <button id="startMeditationBtn" class="primary-btn">Start</button>
+          <button id="pauseMeditationBtn" class="secondary-btn" disabled>Pause</button>
+          <button id="resetMeditationBtn" class="secondary-btn" disabled>Reset</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
